@@ -1,0 +1,38 @@
+{% extends 'BibliotecaVirtual/base.html' %}
+{% load static %}
+
+
+{% block titulo %}
+    Listado de Usuarios
+{% endblock titulo %}
+
+
+{% block cabecera %}
+    Listado de Usurios
+    <p style="font-size: 14px;">Aqui podras ver nuestros Usuarios</p>
+{% endblock cabecera %}
+    
+{% block contenido %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>nombre</th>
+            <th>dni</th>
+            <th>maiil</th>
+            <th>direccion</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for usuario in usuarios %}
+    <tr>
+        <td>{{ usuario.id }}</td>
+        <td>{{ usuario.nombre }}</td>
+        <td>{{ usuario.dni }}</td>
+        <td>{{ usuario.mail }}</td>
+        <td>{{ usuario.direccion }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}

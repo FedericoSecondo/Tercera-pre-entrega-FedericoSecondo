@@ -1,0 +1,33 @@
+{% extends 'BibliotecaVirtual/base.html' %}
+{% load static %}
+
+{% block cabecera %}
+    Listado de Titulos {{titulo}}
+    <p style="font-size: 14px;">"Aqui se muestran los resultados de la busqueda a través de buscarTitulo"</p>
+{% endblock cabecera %}
+    
+{% block contenido %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>titulo</th>
+            <th>fecha</th>
+            <th>editorial</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for libro in libros %}
+    <tr>
+        <td>{{ libro.id }}</td>
+        <td>{{ libro.titulo }}</td>
+        <td>{{ libro.fecha }}</td>
+        <td>{{ libro.editorial }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}
+
+    
+   

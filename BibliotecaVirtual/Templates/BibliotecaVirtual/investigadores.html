@@ -1,0 +1,36 @@
+{% extends 'BibliotecaVirtual/base.html' %}
+{% load static %}
+
+
+{% block titulo %}
+    Listado de Investigadores
+{% endblock titulo %}
+
+
+{% block cabecera %}
+    Listado de Investigadores
+    <p style="font-size: 14px;">Aqui podras ver nuestros Investigadores Asociados</p>
+{% endblock cabecera %}
+    
+{% block contenido %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>nombre</th>
+            <th>dni</th>
+            <th>maiil</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for investigador in investigadores %}
+    <tr>
+        <td>{{ investigador.id }}</td>
+        <td>{{ investigador.nombre }}</td>
+        <td>{{ investigador.dni }}</td>
+        <td>{{ investigador.mail }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}

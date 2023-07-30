@@ -1,0 +1,38 @@
+{% extends 'BibliotecaVirtual/base.html' %}
+{% load static %}
+
+
+{% block titulo %}
+    Listado de Prestamos
+{% endblock titulo %}
+
+
+{% block cabecera %}
+    Listado de Prestamos
+    <p style="font-size: 14px;">Aqui podras ver los textos en prestamo</p>
+{% endblock cabecera %}
+    
+{% block contenido %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>texto</th>
+            <th>fechaRetiro</th>
+            <th>fechaDevolucion</th>
+            <th>deudor</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for prestamo in prestamos %}
+    <tr>
+        <td>{{ prestamo.id }}</td>
+        <td>{{ prestamo.texto }}</td>
+        <td>{{ prestamo.fechaRetiro }}</td>
+        <td>{{ prestamo.fechaDevolucion }}</td>
+        <td>{{ prestamo.deudor }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}
