@@ -14,6 +14,7 @@ Prestamos: Se pueden establecer los libros que han sido prestados y si la person
 Los prestamos se pueden cargar a través de un formulario FORMS  a través de la url prestamos_form/
 
 Boton de Inicio: permite al navegador ir a la pagina de inicio donde se muestra una cabecera, fotos de autores (Borges, Bioy Casares, Sabato), y un pie de pagina
+
 Las vistas de : Libro, Investigadores, Usuario y Prestamos heredan el template HTML principal, por lo que todas las vistas contienen la misma cabecera y el mismo pie
 
 Boton Administración: permite gestionar la base de datos y agregar, borrar : Libros,Usuarios,Investigadores,Prestamos.
